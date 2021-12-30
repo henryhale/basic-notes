@@ -1,0 +1,269 @@
+
+@import 'styles.css';
+
+html, body {
+	overflow-x: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+.notes-body {
+	min-height: calc(100vh - 75px);
+	margin-top: 75px;
+	position: relative;
+}
+
+.notes-intro {
+	width: 300px;
+
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-40%);
+  -webkit-transform: translate(-50%,-40%);
+  -moz-transform: translate(-50%,-40%);
+  -ms-transform: translate(-50%,-40%);
+  -o-transform: translate(-50%,-40%);
+}
+
+.notes-form > div {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+textarea {
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 45vh;
+
+	padding: 10px !important;
+
+	margin-bottom: 10px;
+
+	box-shadow: inset 0 0 1rem 0.1rem #dbdce4;
+  -webkit-box-shadow: inset 0 0 1rem 0.1rem #dbdce4;
+  -o-box-shadow: inset 0 0 1rem 0.1rem #dbdce4;
+  -ms-box-shadow: inset 0 0 1rem 0.1rem #dbdce4;
+  -moz-box-shadow: inset 0 0 1rem 0.1rem #dbdce4;
+
+	overflow: hidden;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+.my-main {
+  margin-left:200px;
+  min-height: calc(100vh - 120px);
+  position:relative;
+}
+.my-main > .w3-top {
+  top:65px;
+  padding: 10px 0;
+  width:calc(100% - 250px);
+}
+@media (max-width: 600px) {
+	.my-main {
+		margin-left: 50px !important;
+		margin-right: 0 !important;
+	}
+  .my-main > .w3-top {
+    width: calc(100% - 100px) !important;
+  }
+  .w3-sidebar {
+    width: 50px !important;
+  }
+
+}
+
+/* start radio custom */
+/* Customize the label (the container) */
+.rcontainer {
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.rcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.rcheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  background-color: transparent;
+  color: #333;
+}
+
+/* On mouse-over, add a grey background color *
+.rcontainer:hover input ~ .rcheckmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a grey background *
+.rcontainer input:checked ~ .rcheckmark {
+  background-color: #eee;
+  color: #000;
+
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.rcheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.rcontainer input:checked ~ .rcheckmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.rcontainer .rcheckmark:after {
+  left: 9px;
+  top: 5px;
+  width: 10px;
+  height: 20px;
+}
+
+/* According to color */
+.rcontainer input:checked ~ .rcheckmark.hover-pale-blue {
+	background-color: #ddffff;
+	color: #000;
+}
+.rcontainer input:checked ~ .rcheckmark.hover-pale-red {
+	background-color: #ffdddd;
+	color: #000;
+}
+.rcontainer input:checked ~ .rcheckmark.hover-light-grey {
+	background-color: #f1f1f1;
+	color: #000;
+}
+.rcontainer input:checked ~ .rcheckmark.hover-pale-green {
+	background-color: #ddffdd;
+	color: #000;
+}
+.rcontainer input:checked ~ .rcheckmark.hover-pale-yellow {
+	background-color: #ffffcc;
+	color: #000;
+}
+
+/* end radio custom */
+
+/* overflowing text */
+.giveMeEllipsis {    
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+    display: -webkit-box;    
+    -webkit-box-orient: vertical;    
+    -webkit-line-clamp: 5; /* number of lines to show */    
+    line-height: 1.5;         /* fallback */    
+    max-height: 120px;       /* fallback */ 
+    min-width:100%;
+    max-width: 100%;
+}
+
+    /* Dark Mode */
+
+html.notes-darkmode,
+.notes-darkmode body,
+.notes-darkmode .w3-white,
+.notes-darkmode textarea,
+.notes-darkmode #toastContainer {
+  background: #111 !important;
+    color: #ff974a !important;
+}
+
+.notes-darkmode #toastContainer {
+  box-shadow: 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+}
+
+.notes-darkmode .w3-hover-none:hover,
+.notes-darkmode .w3-hover-light-grey:hover {
+  background: transparent !important;
+    color: #ff974a !important;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.5)";
+    filter: alpha(opacity=0.5);
+    -moz-opacity: 0.5; 
+}
+
+.notes-darkmode textarea {
+  box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+  -webkit-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -moz-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -ms-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -o-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+}
+
+.notes-darkmode button {
+  background-color: transparent !important;
+}
+
+.notes-darkmode .rcheckmark,
+.notes-darkmode .w3-light-grey {
+  color: #ff974a !important;
+}
+
+.notes-darkmode .rcontainer input:checked ~ .rcheckmark {
+    background-color: transparent !important;
+    color: rgba(255,255,255,.8) !important;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+  -webkit-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -moz-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -ms-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -o-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+
+}
+
+.notes-darkmode .w3-light-grey {
+  background: transparent !important; 
+}
+
+.notes-darkmode .w3-light-grey.w3-input:not(button.w3-button) {
+  border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+  -webkit-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -moz-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -ms-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+    -o-box-shadow: inset 0 0 1rem 0.1rem rgba(0,0,0,0.5) !important;
+}
+
+.notes-darkmode .w3-border:not(.w3-tooltip) {
+  border-color: #ff974a !important;
+}
+
+.notes-darkmode .w3-border.w3-tooltip.w3-border-grey {
+  border-color: #010101 !important;
+}
+.notes-darkmode .w3-grey {
+  background: #010101 !important; 
+}
+
+.notes-darkmode .w3-glass {
+  background: rgba(0,0,0,.5) !important;  
+}
+
